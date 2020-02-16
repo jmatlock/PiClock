@@ -1,6 +1,8 @@
-# PiClock
+# PiClock Plus
 
-The code for this project has been updated to work with the latest matrix drivers.
+My forked version of GeekyTim's PiClock project to help make it more turnkey, add features, and make it more extendable by others.
+
+What is below is from GeekyTim's project. I'm just getting started in making modifications and updates.
 
 ## Requirements
 The PiClock is a weather display made with:
