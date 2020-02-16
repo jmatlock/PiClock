@@ -2,6 +2,22 @@
 
 My forked version of GeekyTim's PiClock project to help make it more turnkey, add features, and make it more extendable by others.
 
+## Praise for GeekyTim's version
+* The code is pretty well written and is fairly clear to understand. It can get tricky in places, but a few well placed logging statements helped me get over some of my mental hurdles. I liked that the way it was structured actually helped me learn a few things about python as well.
+* I think doing this project with threading was a great choice. It helps with the separation of functions and I think will be a potentially good launching off point for considering how to extend this project.
+* There were just a few places with hardcoding, but for the most part, the code had clear avenues for customizing via configurable variables.
+
+## Goals of this forked version
+* Fix some of the problems I had with directly using the code such as removing hardcoded temperature units, and the interesting, but unneeded PIR feature.
+* Separate out the parts that require individual configuration such as the Open Weather Map key, the users location, and the preferred units into its own python module. Also have the LED matrix configuration separated out as well. The goal will be for another user to ONLY have to change parameters in a specific configuration module that is separate from the code implementation.
+* Simplify the temperature display to just show the current temp instead of the min/max temp.
+* Add instructions and help for enabling the display at boot. Optionally add something (code, instructions, etc.) to assist the user in adding a switch for soft Raspberry Pi shutdown.
+* Have logging flush to output regularly so someone can monitor the logs while the project is running. Additionally include some checks to manage log file size to prevent overrunning the file system.
+* Add the ability to extend the display to include other data pulled from RestAPIs, screen scraping or other types of data. Two examples I'm planning on including:
+    * A rolling display of ongoing Instructables contests (https://www.instructables.com/contest/)
+    * A "days until" declaration for events of interest to the user (e.g. "23 days until your birthday" or "4 weeks until Halloween").
+* Provide some kind of support for displaying multiple text lines in a given bounding area.
+
 What is below is from GeekyTim's project. I'm just getting started in making modifications and updates.
 
 ## Requirements
